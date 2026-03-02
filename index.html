@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BRUNIC - Personalización Única</title>
+    <style>
+        :root {
+            --turquesa: #208799;
+            --fucsia: #e91e63;
+            --amarillo: #fbc02d;
+            --oscuro: #1a1a1a;
+        }
+
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: var(--oscuro);
+            background-color: #f9f9f9;
+        }
+
+        nav {
+            background-color: var(--turquesa);
+            padding: 1rem;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+        }
+
+        header {
+            background-color: var(--turquesa);
+            padding: 40px 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* Logo Redondo y Grande */
+        .logo-container {
+            width: 380px; 
+            height: 380px;
+            border-radius: 50%;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+        }
+
+        .logo-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: auto;
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        .esencia-texto {
+            font-size: 1.3rem;
+            line-height: 1.8;
+            color: #444;
+            margin-bottom: 40px;
+        }
+
+        .servicios {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+        }
+
+        .card {
+            background: white;
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+            transition: 0.3s;
+        }
+
+        .card:hover { transform: translateY(-10px); }
+
+        .btn-contacto {
+            display: inline-block;
+            background-color: var(--fucsia);
+            color: white;
+            padding: 15px 30px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            margin-top: 20px;
+            transition: 0.3s;
+        }
+
+        .btn-contacto:hover { background-color: #c2185b; }
+
+        .btn-whatsapp {
+            position: fixed;
+            width: 65px;
+            height: 65px;
+            bottom: 30px;
+            right: 30px;
+            background-color: #25d366;
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+            z-index: 1000;
+            font-size: 24px;
+        }
+
+        footer {
+            background: var(--oscuro);
+            color: white;
+            text-align: center;
+            padding: 40px;
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="#inicio">Inicio</a>
+        <a href="#nosotros">Nosotros</a>
+        <a href="#servicios">Servicios</a>
+    </nav>
+
+    <header id="inicio">
+        <div class="logo-container">
+            <img src="LOGO.jpg" alt="BRUNIC" class="logo-img">
+        </div>
+    </header>
+
+    <section class="container" id="nosotros">
+        <h2 style="color: var(--turquesa); font-size: 2.5rem; margin-bottom: 20px;">Nuestra Esencia</h2>
+        <div class="esencia-texto">
+            Somos una <strong>empresa familiar</strong> enfocada en la personalización. 
+            Creemos que cada idea que nos traes es especial, por eso trabajamos para hacerla 
+            <strong>única e inigualable</strong>. En BRUNIC, tu creatividad es nuestra guía.
+        </div>
+        <a href="https://wa.me/34600000000?text=Hola%20BRUNIC,%20tengo%20una%20idea%20para%20personalizar..." class="btn-contacto" target="_blank">
+            ¡Cuéntanos tu idea!
+        </a>
+    </section>
+
+    <main class="container" id="servicios" style="background-color: #fff; border-radius: 30px; padding: 40px;">
+        <h2 style="color: var(--turquesa); margin-bottom: 30px;">Servicios Destacados</h2>
+        <div class="servicios">
+            <div class="card" style="border-top: 6px solid var(--fucsia);">
+                <h3 style="color: var(--fucsia);">Sublimación</h3>
+                <p>Tazas, textiles y artículos con acabados profesionales y personalizados.</p>
+            </div>
+            <div class="card" style="border-top: 6px solid var(--amarillo);">
+                <h3 style="color: var(--amarillo);">Papelería Creativa</h3>
+                <p>Diseños exclusivos para tus eventos: invitaciones, detalles y mucho más.</p>
+            </div>
+        </div>
+    </main>
+
+    <a href="https://wa.me/34600000000" class="btn-whatsapp" target="_blank">WP</a>
+
+    <footer>
+        <p><strong>BRUNIC</strong> - Personalización en Vélez-Málaga</p>
+        <p>Hecho con ❤️ en familia</p>
+    </footer>
+
+</body>
+</html>
